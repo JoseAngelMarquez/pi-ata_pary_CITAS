@@ -1,6 +1,9 @@
 const express = require('express');
 const cors = require('cors');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6cb63a3cbbadfd3fabb4bc015a8347f81971ea70
 const session = require('express-session');
 require('dotenv').config();
 
@@ -14,8 +17,12 @@ app.use(cors(
 }
 ));
 app.use(session({
+<<<<<<< HEAD
     secret: 'mi_clave_secreta', // ⚠️ Cambia esto por algo seguro
 
+=======
+    
+>>>>>>> 6cb63a3cbbadfd3fabb4bc015a8347f81971ea70
  }))
 // Para recibir JSON
 app.use(express.json());
