@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+
 const session = require('express-session');
 require('dotenv').config();
 
@@ -13,7 +14,8 @@ app.use(cors(
 }
 ));
 app.use(session({
-    
+    secret: 'mi_clave_secreta', // ⚠️ Cambia esto por algo seguro
+
  }))
 // Para recibir JSON
 app.use(express.json());

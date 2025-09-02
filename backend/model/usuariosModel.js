@@ -2,60 +2,34 @@ const pool = require('../config/db');
 const bcrypt = require('bcrypt');
 
 class Usuarios {
-  static async crear({ usuario, contrasena }) {
+  static async crear({ nombre, correo, telefono, contrasena, rol }) {
     try {
-      // Verificar si el usuario ya existe
+      // Verificar si el correo ya existe
       const [usuarios] = await pool.query(
-        'SELECT * FROM administrador WHERE usuario = ?',
-        [usuario]
+        'SELECT * FROM usuarios WHERE correo = ?',
+        [correo]
       );
-
+  
       if (usuarios.length > 0) {
-        throw new Error('El nombre de usuario ya existe'); // Lanzar error
+        throw new Error('El correo ya existe'); // Lanzar error
       }
-
+  
       // Encriptar contraseña
       const hashedPassword = await bcrypt.hash(contrasena, 10);
-
+  
       // Insertar en la base de datos
       const [result] = await pool.query(
-        'INSERT INTO administrador (usuario, contrasena) VALUES (?, ?)',
-        [usuario, hashedPassword]
+        'INSERT INTO usuarios (nombre, correo, telefono, contrasena, rol) VALUES (?, ?, ?, ?, ?)',
+        [nombre, correo, telefono, hashedPassword, rol]
       );
-
-      return { id: result.insertId, usuario };
+  
+      return { id: result.insertId, nombre, correo, rol };
     } catch (error) {
       throw error;
     }
   }
+  
 
-  static async login({ usuario, contrasena }) {
-    try {
-      // Buscar usuario en la base de datos
-      const [usuarios] = await pool.query(
-        'SELECT * FROM administrador WHERE usuario = ?',
-        [usuario]
-      );
-
-      if (usuarios.length === 0) {
-        throw new Error('Usuario no encontrado');
-      }
-
-      const usuarioEncontrado = usuarios[0];
-
-      // Verificar la contraseña
-      const passwordMatch = await bcrypt.compare(contrasena, usuarioEncontrado.contrasena);
-
-      if (!passwordMatch) {
-        throw new Error('Contraseña incorrecta');
-      }
-
-      // Retornar solo lo necesario, sin la contraseña
-      return { id: usuarioEncontrado.id, usuario: usuarioEncontrado.usuario };
-    } catch (error) {
-      throw error;
-    }
-  }
 }
 
 module.exports = Usuarios;
