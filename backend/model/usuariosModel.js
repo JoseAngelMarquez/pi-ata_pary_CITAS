@@ -1,3 +1,4 @@
+const e = require('express');
 const pool = require('../config/db');
 const bcrypt = require('bcrypt');
 
@@ -28,6 +29,31 @@ class Usuarios {
       throw error;
     }
   }
+
+  static async login(correo, contrasena) {
+    try {
+      const [usuarios] = await pool.query(
+        'SELECT * FROM usuarios WHERE correo = ?',
+        [correo]
+      );
+      //
+      if (usuarios.length === 0) {
+        throw new Error('Usuario no encontrado');
+      }
+      const usuario = usuarios[0];
+      const isMatch = await bcrypt.compare(contrasena, usuario.contrasena);
+      if (!isMatch) {
+        throw new Error('Contraseña incorrecta');
+      }
+      return { id: usuario.id, nombre: usuario.nombre, correo: usuario.correo, rol: usuario.rol };
+
+
+    } catch (error) {
+      throw error;
+    }
+
+  }
+  
   
 
 
