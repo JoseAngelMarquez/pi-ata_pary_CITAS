@@ -1,4 +1,3 @@
-const e = require('express');
 const pool = require('../config/db');
 const bcrypt = require('bcrypt');
 
@@ -55,7 +54,6 @@ class Usuarios {
   }
   
   
-
 
 
 

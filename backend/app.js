@@ -25,6 +25,8 @@ app.use(express.json());
 const PORT = process.env.PORT || 3001;
 
 app.use('/api/usuarios', require('./routes/usuariosRoutes'));
+app.use('/api/paquetes', require('./routes/paquetesRoutes'));
+
 // Levantar servidor
 app.listen(PORT, () => {   
     console.log(`Server is running on port ${PORT}`);

@@ -1,4 +1,5 @@
 const Usuarios = require('../model/usuariosModel');
+
 exports.crearUsuario = async (req, res) => {
   console.log('req.body:', req.body); // Para ver qué llega
 
