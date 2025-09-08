@@ -1,4 +1,14 @@
+const { json } = require("express");
 const Paquetes = require("../model/paquetesModel");
+
+exports.obtenerPaquetes = async (req,res) => {
+    try {
+        const paquetes = await Paquetes.obtenerPaquete();
+        res.json(paquetes);
+    } catch (error) {
+        res.status(500).json({mensaje: 'Error al obtener paquetes'});
+    }
+}
 
 exports.Paquetes = async (req, res) => {
     try {

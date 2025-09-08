@@ -2,6 +2,16 @@ const pool = require('../config/db');
 
 class Paquetes{
 
+    static async obtenerPaquete(){
+        try{
+            const [rows] = await pool.query('select * from paquetes')
+            return rows;
+        }catch{
+
+        }
+    }
+
+
     static async crearPaquete({nombre, descripcion, precio, duracion}){
         try {
             const [result] = await pool.query(
@@ -13,6 +23,8 @@ class Paquetes{
             throw error;
         }
     }
+
+
 
 }
 module.exports = Paquetes;
