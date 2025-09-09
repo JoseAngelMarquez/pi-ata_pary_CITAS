@@ -5,7 +5,7 @@ import { Button } from '@mui/material';
 import styles from '../styles/login.module.css';
 function Login() {
     return (
-        <div>
+        <div className={styles['container']}>
             <FormControl className={styles['login-form']} >
 
                 <TextField label="Usuario" variant="outlined" fullWidth style={{ marginBottom: "16px" }} />
