@@ -1,14 +1,15 @@
 import React from "react";
-import { Button, Typography } from "@mui/material";
-import Input from '@mui/material/Input';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "../pages/login"; // importa tu componente
 
 function App() {
   return (
-    <div style={{ padding: "20px" }}>
-      
-        <Input />
-      
-    </div>
+    <Router>
+      <Routes>
+        {/* Aquí defines la ruta que mostrará tu Login */}
+        <Route path="/" element={<Login />} />
+      </Routes>
+    </Router>
   );
 }
 

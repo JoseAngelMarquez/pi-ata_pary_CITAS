@@ -11,6 +11,8 @@ class Paquetes{
         }
     }
 
+  
+
 
     static async crearPaquete({nombre, descripcion, precio, duracion}){
         try {
