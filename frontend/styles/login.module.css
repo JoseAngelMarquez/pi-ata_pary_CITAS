@@ -1,20 +1,28 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
 .container {
     display: flex;
-    justify-content: center; /* centra verticalmente */
-    align-items: center; /* alinea horizontalmente */
+    justify-content: center; /* centra horizontalmente */
+    align-items: center;     /* centra verticalmente */
     height: 100vh;
     width: 100vw;
     background-color: #f0f2f5;
 }
 
-
-
 .login-form {
     display: flex;
     flex-direction: column;
+    align-items: center; /* centra los inputs dentro del form */
+    justify-content: center;
     gap: 16px;
-    width: 300px;
-    padding: 20px;
+    height: 600px;
+    width: 400px; /* ancho del form */
+    padding: 40px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

@@ -1,24 +1,38 @@
 import React from "react";
-import { FormControl } from '@mui/material';
-import { TextField } from '@mui/material';
-import { Button } from '@mui/material';
+import { FormControl, TextField, Button } from '@mui/material';
 import styles from '../styles/login.module.css';
+
 function Login() {
     return (
-        <div className={styles['container']}>
-            <FormControl className={styles['login-form']} >
+        <div className={styles.container}>
+            <FormControl className={styles['login-form']}>
 
-                <TextField label="Usuario" variant="outlined" fullWidth style={{ marginBottom: "16px" }} />
-                <TextField label="Contraseña" variant="outlined" fullWidth style={{ marginBottom: "16px" }} />
+                <TextField 
+                    label="Usuario" 
+                    variant="outlined" 
+                    fullWidth 
+                    style={{ maxWidth: "250px", width: "100%" }} 
+                />
 
-                <Button variant="contained" color="primary" fullWidth>
+                <TextField 
+                    label="Contraseña" 
+                    variant="outlined" 
+                    fullWidth 
+                    style={{ maxWidth: "250px", width: "100%" }} 
+                />
+
+                <Button 
+                    variant="contained" 
+                    color="primary" 
+                    fullWidth
+                    style={{ maxWidth: "250px", width: "100%" }}
+                >
                     Iniciar Sesión
                 </Button>
 
             </FormControl>
         </div>
     )
-
 }
 
 export default Login;
