@@ -9,7 +9,7 @@ const app = express();
 // Habilitar CORS correctamente
 app.use(cors(
 {
-    origin: 'http://localhost:3000', // Origen del frontend
+    origin: 'http://localhost:5173', // Origen del frontend
     credentials: true, // Permitir cookies y encabezados de autorización
 }
 ));

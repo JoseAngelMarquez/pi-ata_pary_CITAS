@@ -1,13 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "../pages/login"; // importa tu componente
+import Login from "../pages/login";
+import Principal from "../pages/principal";
+import LayoutAdmin from "../Layouts/LayoutAdmin";
 
 function App() {
   return (
     <Router>
       <Routes>
-        {/* Aquí defines la ruta que mostrará tu Login */}
+        {/* Ruta pública */}
         <Route path="/" element={<Login />} />
+
       </Routes>
     </Router>
   );
