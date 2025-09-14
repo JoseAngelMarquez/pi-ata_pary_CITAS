@@ -2,11 +2,12 @@ import React from "react";
 import { MenuList, MenuItem, Paper } from "@mui/material";
 import { Link, Outlet } from "react-router-dom";
 import styles from "../styles/LayoutAdmin.module.css"
+import NavBar from "../components/navBar"
 function LayoutAdmin() {
   return (
     <div className={styles.parent}>
       <div className={styles.div2}>
-    <h1></h1>
+      <NavBar />
       </div>
       <aside className={styles.div1}>
         <Paper className={styles.paper}>
