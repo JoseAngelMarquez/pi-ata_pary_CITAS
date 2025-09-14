@@ -1,0 +1,9 @@
+/* usersTable.module.css */
+.table_container {
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    height: 100vh;           /* solo para el área de la tabla */
+    width: 100%;
+  }
+  
