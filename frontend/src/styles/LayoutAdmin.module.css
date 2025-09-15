@@ -9,9 +9,10 @@
     height: 100%;
     } 
   
-.div2 { 
-    grid-area: 1 / 2 / 2 / 3; 
-    } 
+    .div2 { 
+        grid-area: 1 / 2 / 2 / 3; /* columna 2, fila 1 */
+    }
+    
 
 .div3 {
      grid-area: 2 / 2 / 3 / 3;

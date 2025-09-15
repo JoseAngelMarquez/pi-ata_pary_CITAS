@@ -12,6 +12,8 @@ function LayoutAdmin() {
       <aside className={styles.div1}>
         <Paper className={styles.paper}>
           <MenuList>
+          <h1>wda</h1>
+
             <MenuItem component={Link} to="/admin/Principal">
               Inicio
             </MenuItem>
