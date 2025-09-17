@@ -19,9 +19,12 @@ function UsersTable() {
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell>ID</TableCell>
                   <TableCell>Nombre</TableCell>
                   <TableCell>Email</TableCell>
+                  <TableCell>Rol</TableCell>
+
+                  <TableCell>Acciones</TableCell>
+
                 </TableRow>
               </TableHead>
               <TableBody>
