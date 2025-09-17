@@ -1,17 +1,10 @@
 import React from "react";
-import {
-  Table,
-  TableHead,
-  TableBody,
-  TableRow,
-  TableCell,
-  Paper,
-} from "@mui/material";
-import styles from "../styles/usersTable.module.css"
+import { Table, TableHead, TableBody, TableRow, TableCell, Paper } from "@mui/material";
+import styles from "../styles/usersTable.module.css";
 
 function UsersTable() {
   return (
-    <div className={styles.table_container}>
+    <div className={styles.center_container}>
       <Paper style={{ padding: "16px" }}>
         <Table>
           <TableHead>

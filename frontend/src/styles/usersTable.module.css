@@ -1,9 +1,7 @@
-/* usersTable.module.css */
 .table_container {
-    display: flex;
-    justify-content: center; /* horizontal */
-    align-items: center;     /* vertical */
-    height: 100vh;           /* solo para el área de la tabla */
-    width: 100%;
-  }
-  
+  display: flex;
+  justify-content: center;   /* centra horizontalmente */
+  align-items: center;       /* centra verticalmente */
+  height: 100%;              /* ocupa todo el alto del contenedor padre */
+  width: 100%;               /* ocupa todo el ancho */
+}

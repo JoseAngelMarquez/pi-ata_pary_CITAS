@@ -1,17 +1,23 @@
 import React from "react";
 import { MenuList, MenuItem, Paper } from "@mui/material";
 import { Link, Outlet } from "react-router-dom";
-import styles from "../styles/LayoutAdmin.module.css"
+import layoutStyles from "../styles/LayoutAdmin.module.css";
+import appStyles from "../styles/App.module.css";
 import NavBar from "../components/navBar"
+
 function LayoutAdmin() {
   return (
-    <div className={styles.parent}>
-      <div className={styles.div2}>
+    
+    <div className={appStyles.parent}>
+     <div className={appStyles.div2}>
       <NavBar />
-      </div>
-      <aside className={styles.div1}>
-        <Paper className={styles.paper}>
+     </div>
+      <aside className={appStyles.div1}>
+        
+        <Paper className={layoutStyles.paper}>
+        
           <MenuList>
+            
           <h1>wda</h1>
 
             <MenuItem component={Link} to="/admin/Principal">
@@ -27,7 +33,7 @@ function LayoutAdmin() {
           </MenuList>
         </Paper>
       </aside>
-      <div className={styles.div3}>
+      <div className={appStyles.div3}>
         <Outlet />
       </div>
     </div>

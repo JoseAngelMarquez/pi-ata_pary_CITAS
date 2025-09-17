@@ -1,23 +1,4 @@
-.parent {
-    display: grid;
-    grid-template-columns: 200px 1fr; /* Sidebar fijo + contenido flexible */
-    grid-template-rows: 60px 1fr;     /* Header fijo + contenido flexible */
-  }
-  
-  .div1 { 
-    grid-area: 1 / 1 / 3 / 2;
-    height: 100%;
-    } 
-  
-    .div2 { 
-        grid-area: 1 / 2 / 2 / 3; /* columna 2, fila 1 */
-    }
-    
 
-.div3 {
-     grid-area: 2 / 2 / 3 / 3;
-     } /* Contenido ocupa resto */
-  
 .paper{
     height: 100vh;
 }
