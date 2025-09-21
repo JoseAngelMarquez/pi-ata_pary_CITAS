@@ -23,10 +23,7 @@ function LayoutAdmin() {
             <MenuItem component={Link} to="/admin/Principal">
               Inicio
             </MenuItem>
-            <MenuItem component={Link} to="/admin/Principal">
-              pagina1
-            </MenuItem>
-            <MenuItem component={Link} to="/admin/Pagina">
+            <MenuItem component={Link} to="/admin/Usuarios">
               pagina
             </MenuItem>
 

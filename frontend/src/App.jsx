@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
-import Principal from "./pages/Principal";
+import Principal from "./pages/Principal"; 
 import LayoutAdmin from "./Layouts/LayoutAdmin";
-import Pagina from "./pages/Pagina";
+import Usuarios from "./pages/Usuarios";
 function App() {
   return ( 
     <Router>
@@ -16,7 +16,7 @@ function App() {
           <Route index element={<Principal />} />
           {/* Ruta anidada: /Admin/Principal */}
           <Route path="Principal" element={<Principal />} />
-          <Route path="Pagina" element={<Pagina />} />
+          <Route path="Usuarios" element={<Usuarios />} />
 
         </Route>
 

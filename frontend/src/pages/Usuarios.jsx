@@ -4,7 +4,7 @@ import styles from "../styles/tableGeneric.module.css";
 import EditIcon from "@mui/icons-material/Edit";
 import { IconButton } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
-function UsersTable() {
+function Usuarios() {
   const columns = ["Nombre", "Email", "Rol", "Acciones"];
   const data = [
     {
@@ -31,4 +31,4 @@ function UsersTable() {
   );
 }
 
-export default UsersTable;
+export default Usuarios;
