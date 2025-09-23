@@ -9,6 +9,7 @@ function LayoutAdmin() {
 const location = useLocation();
 
 const navConfig = {
+    "/admin": "Panel principal",
   "/admin/Principal": "Bienvenido al panel de usuarios",
   "/admin/Usuarios": "Gestión de paquetes",
 };
@@ -37,6 +38,9 @@ const message = navConfig[location.pathname] || null;
             </MenuItem>
             <MenuItem component={Link} to="/admin/Usuarios">
               Paquetes
+            </MenuItem>
+            <MenuItem component={Link} to= "/admin/Clientes">
+            Clientes
             </MenuItem>
 
           </MenuList>
