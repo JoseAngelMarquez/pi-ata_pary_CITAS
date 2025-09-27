@@ -4,7 +4,7 @@ import Login from "./pages/Login";
 import Principal from "./pages/Principal"; 
 import LayoutAdmin from "./Layouts/LayoutAdmin";
 import Usuarios from "./pages/Usuarios";
-import Clientes from "./pages/Clientes";
+import Reservas from "./pages/Reservas";
 function App() {
   return ( 
     <Router>
@@ -18,7 +18,7 @@ function App() {
           {/* Ruta anidada: /Admin/Principal */}
           <Route path="Principal" element={<Principal />} />
           <Route path="Usuarios" element={<Usuarios />} />
-          <Route path="Clientes" element={<Clientes />} />
+          <Route path="Reservas" element={<Reservas />} />
         </Route>
 
       </Routes>

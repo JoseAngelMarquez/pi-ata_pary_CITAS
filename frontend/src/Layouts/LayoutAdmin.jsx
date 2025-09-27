@@ -39,8 +39,8 @@ const message = navConfig[location.pathname] || null;
             <MenuItem component={Link} to="/admin/Usuarios">
               Paquetes
             </MenuItem>
-            <MenuItem component={Link} to= "/admin/Clientes">
-            Clientes
+            <MenuItem component={Link} to= "/admin/Reservas">
+            Reservas
             </MenuItem>
 
           </MenuList>

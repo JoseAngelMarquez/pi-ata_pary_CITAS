@@ -1,6 +1,6 @@
 import React from "react";
 import TableGeneri from "../components/tableGeneric"
- function Clientes(){
+ function Reservas(){
     const campos = ["Cliente", "Paquete", "Fecha", "Duración", "Estado", "Acciones"];
     const datos=[
     {
@@ -17,4 +17,4 @@ import TableGeneri from "../components/tableGeneric"
     )
  };
 
- export default Clientes;
+ export default Reservas;
