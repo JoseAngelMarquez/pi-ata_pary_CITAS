@@ -4,7 +4,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import { IconButton } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-function Principal(){
+function Paquetes(){
     const columns = ["Nombre", "Descripción", "Precio", "Duración", "Acciones"];
     const data =[
         {Nombre: "Paquete 1", Descripción:"Incluye 6 mesas redondas", Precio:"500", Duración: "5 goras" , Acciones:
@@ -29,4 +29,4 @@ return(
 
 }
 
-export default Principal;
+export default Paquetes;

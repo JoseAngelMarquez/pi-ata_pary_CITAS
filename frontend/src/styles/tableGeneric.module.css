@@ -1,7 +1,0 @@
-.table_container {
-  display: flex;
-  justify-content: center;   /* centra horizontalmente */
-  align-items: center;       /* centra verticalmente */
-  height: 100%;              /* ocupa todo el alto del contenedor padre */
-  width: 100%;               /* ocupa todo el ancho */
-}

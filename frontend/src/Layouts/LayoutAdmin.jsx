@@ -10,8 +10,8 @@ const location = useLocation();
 
 const navConfig = {
     "/admin": "Panel principal",
-  "/admin/Principal": "Bienvenido al panel de usuarios",
-  "/admin/Usuarios": "Gestión de paquetes",
+  "/admin/Paquetes": "Gestión de paquetes",
+  "/admin/Usuarios": "Bienvenido al panel de usuarios",
 };
 
 // Obtenemos mensaje según ruta
@@ -33,10 +33,10 @@ const message = navConfig[location.pathname] || null;
             
           <h1>Admin</h1>
 
-            <MenuItem component={Link} to="/admin/Principal">
+            <MenuItem component={Link} to="/admin/Usuarios">
               Usuarios
             </MenuItem>
-            <MenuItem component={Link} to="/admin/Usuarios">
+            <MenuItem component={Link} to="/admin/Paquetes">
               Paquetes
             </MenuItem>
             <MenuItem component={Link} to= "/admin/Reservas">
