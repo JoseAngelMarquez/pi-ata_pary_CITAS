@@ -10,7 +10,7 @@ import TableGeneri from "../components/tableGeneric"
 
     return(
         <div>
-            <TableGeneri columns={campos} data={datos} />
+            <TableGeneri data={datos} columns={campos} />
 
         </div>
 
