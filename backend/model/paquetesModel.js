@@ -23,7 +23,9 @@ class Paquetes {
             );
             return { id: result.insertId, nombre, descripcion, precio, duracion };
         } catch (error) {
-            throw error;
+            console.error('Error al crear el paquete:', error);
+            throw new Error('No se pudo crear el paquete'); 
+
         }
     }
 
