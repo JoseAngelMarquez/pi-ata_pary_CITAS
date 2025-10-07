@@ -11,6 +11,8 @@ const location = useLocation();
 const navConfig = {
   "/admin/Paquetes": "Gestión de paquetes",
   "/admin/Usuarios": "Bienvenido al panel de usuarios",
+  "/admin/Reservas": "Bienvenido al apartado de reservas",
+  "/admin/Pagos": "Bienvenido al apartado de pagos",
 };
 
 // Obtenemos mensaje según ruta
